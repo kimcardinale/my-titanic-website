@@ -1,0 +1,17 @@
+---
+title: "Titanic Insights"
+---
+
+## Exploring the Titanic Dataset
+
+This website presents a brief analysis of the passenger data from the RMS Titanic. The analysis includes:
+
+- Survival rates based on passenger class.
+- The relationship between passenger age and the fare they paid.
+
+Use the navigation bar above to explore the different analyses.
+
+The data used is the well-known Titanic dataset, often used for introductory data science tasks.
+
+![](Titanic_Wikipedia.jpg)
+*Source: Wikipedia*

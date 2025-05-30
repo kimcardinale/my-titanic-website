@@ -1,0 +1,47 @@
+---
+title: "Survival Rate by Passenger Class"
+---
+
+This page analyzes the survival rate of Titanic passengers based on their socio-economic class (Pclass).
+
+First, let's load the necessary libraries and the dataset.
+
+```{python} 
+#| label: setup-libs-data-pclass
+#| echo: true
+#| eval: true
+#| message: false
+#| warning: false
+
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+titanic_df = pd.read_csv('data/titanic.csv')
+```
+
+# Calculating and Visualising Survival Rates
+```{python}
+#| label: pclass-survival-plot
+#| echo: true
+#| eval: true
+#| fig-cap: "Survival Rate by Passenger Class"
+
+# Calculate survival rate by Pclass
+pclass_survival_rate = titanic_df.groupby('pclass')['survived'].mean().reset_index()
+print("Survival rate by Pclass:")
+print(pclass_survival_rate)
+
+# Create bar plot
+plt.figure(figsize=(8, 5))
+sns.barplot(x='pclass', y='survived', data=pclass_survival_rate, palette='viridis', hue='pclass', dodge=False, legend=False)
+plt.title('Survival Rate by Passenger Class')
+plt.xlabel('Passenger Class')
+plt.ylabel('Survival Rate')
+plt.xticks(ticks=[0,1,2], labels=['1st Class', '2nd Class', '3rd Class'])
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.show()
+```
+
+## Interpretation
+The bar chart shows that passengers in first class had a higher survival rate compared to those in second and third class. Third class passengers had the lowest survival rate.

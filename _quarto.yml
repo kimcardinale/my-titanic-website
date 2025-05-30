@@ -1,0 +1,23 @@
+project:
+  type: website
+  output-dir: docs # We'll render the website to a 'docs' folder for GitHub Pages
+
+website:
+  title: "Titanic Data"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: pclass_analysis.qmd
+        text: Survival by Class
+      - href: age_fare_analysis.qmd
+        text: Age vs. Fare
+      - about.qmd # Keep the about page for now
+  page-footer: "Built with Quarto by Kimberly Cardinale"
+
+format:
+  html:
+    theme: lumen  # Other themes: cosmo, brand, sketchy, darkly, lumen, sandstone, etc.
+    css: styles.css
+    toc: true
+    code-fold: true

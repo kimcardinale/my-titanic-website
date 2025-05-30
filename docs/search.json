@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "pclass_analysis.html",
+    "href": "pclass_analysis.html",
+    "title": "Survival Rate by Passenger Class",
+    "section": "",
+    "text": "This page analyzes the survival rate of Titanic passengers based on their socio-economic class (Pclass).\nFirst, let’s load the necessary libraries and the dataset.\nCode\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\ntitanic_df = pd.read_csv('data/titanic.csv')"
+  },
+  {
+    "objectID": "pclass_analysis.html#interpretation",
+    "href": "pclass_analysis.html#interpretation",
+    "title": "Survival Rate by Passenger Class",
+    "section": "Interpretation",
+    "text": "Interpretation\nThe bar chart shows that passengers in first class had a higher survival rate compared to those in second and third class. Third class passengers had the lowest survival rate."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Titanic Insights",
+    "section": "",
+    "text": "This website presents a brief analysis of the passenger data from the RMS Titanic. The analysis includes:\n\nSurvival rates based on passenger class.\nThe relationship between passenger age and the fare they paid.\n\nUse the navigation bar above to explore the different analyses.\nThe data used is the well-known Titanic dataset, often used for introductory data science tasks.\n Source: Wikipedia"
+  },
+  {
+    "objectID": "index.html#exploring-the-titanic-dataset",
+    "href": "index.html#exploring-the-titanic-dataset",
+    "title": "Titanic Insights",
+    "section": "",
+    "text": "This website presents a brief analysis of the passenger data from the RMS Titanic. The analysis includes:\n\nSurvival rates based on passenger class.\nThe relationship between passenger age and the fare they paid.\n\nUse the navigation bar above to explore the different analyses.\nThe data used is the well-known Titanic dataset, often used for introductory data science tasks.\n Source: Wikipedia"
+  },
+  {
+    "objectID": "age_fare_analysis.html",
+    "href": "age_fare_analysis.html",
+    "title": "Age vs. Fare Analysis",
+    "section": "",
+    "text": "This page explores the relationship between passenger age and the fare they paid.\nCode\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\ntitanic_df = pd.read_csv('data/titanic.csv')"
+  },
+  {
+    "objectID": "age_fare_analysis.html#interpretation",
+    "href": "age_fare_analysis.html#interpretation",
+    "title": "Age vs. Fare Analysis",
+    "section": "Interpretation",
+    "text": "Interpretation\nThe scatter plot shows the distribution of passengers by age and fare. While there isn’t a very strong linear relationship, we can observe that some younger passengers paid very high fares."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  }
+]

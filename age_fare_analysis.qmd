@@ -1,0 +1,45 @@
+---
+title: "Age vs. Fare Analysis"
+---
+
+This page explores the relationship between passenger age and the fare they paid.
+
+```{python}
+#| label: setup-libs-data-agefare
+#| echo: true 
+#| eval: true
+#| message: false
+#| warning: false
+
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+titanic_df = pd.read_csv('data/titanic.csv')
+```
+
+# Scatter Plot: Age vs. Fare
+For the following scatter plot, passengers with unknown age will be excluded to avoid errors in visualization.
+
+```{python}
+#| label: age-fare-scatter-plot
+#| echo: true
+#| eval: true
+#| fig-cap: "Scatter Plot of Age vs. Fare, Coloured by Survival Status"
+
+# Create a temporary DataFrame excluding rows with missing 'ag
+titanic_age_fare = titanic_df.dropna(subset=['age'])
+print(f"Number of passengers with known age: {len(titanic_age_fare)}")
+
+plt.figure(figsize=(10, 6))
+sns.scatterplot(x='age', y='fare', hue='survived', data=titanic_age_fare, alpha=0.7, palette={0: '#377eb8', 1: '#ff7f00'})
+plt.title('Age vs. Fare of Titanic Passengers (Coloured by Survival)')
+plt.xlabel('Age (Years)')
+plt.ylabel('Fare Paid')
+plt.legend(title='Survived (0=No, 1=Yes)')
+plt.grid(True, linestyle='--', alpha=0.7)
+plt.show()
+```
+
+## Interpretation
+The scatter plot shows the distribution of passengers by age and fare. While there isn't a very strong linear relationship, we can observe that some younger passengers paid very high fares.
