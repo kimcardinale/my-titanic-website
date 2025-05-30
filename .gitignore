@@ -1,0 +1,16 @@
+# Quarto specific
+/.quarto/
+/_freeze/
+
+# Python specific
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.so
+venv/
+env/
+.env
+
+# OS specific
+.DS_Store
+Thumbs.db
